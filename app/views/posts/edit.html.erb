@@ -1,0 +1,10 @@
+<h1>Editing post</h1>
+
+<% semantic_form_for(@post) do |f| %>
+  <%= f.inputs :title, :preface, :body, :published %>
+  <%= f.buttons %>
+<% end %>
+
+<%= link_to 'Show', @post %> |
+<%= link_to 'Back', posts_path %>
+

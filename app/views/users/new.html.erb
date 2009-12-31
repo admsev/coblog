@@ -1,0 +1,11 @@
+<h1>New user</h1>
+
+<% semantic_form_for(@user) do |f| -%>
+  <%= f.inputs :username, :email, :password, :password_confirmation -%>
+  <% f.buttons do %>
+    <%= f.commit_button 'Sign Up' %>
+  <% end %>
+<% end %>
+
+<%= link_to 'Back', users_path -%>
+

@@ -1,0 +1,14 @@
+<div id='container'>
+  <%= stylesheet_link_tag 'reset', 'application' -%>
+  <div id='topnav'>
+    <%= link_to 'Main page', :root -%>
+    <%= link_to 'People', :users -%>
+    <div id='auth'><%= render :partial=>'users/auth' %></div>
+  </div>
+
+  <div id='sidebar'>Sidebar content</div>
+  <div id='content'><%= yield %></div>
+  <div id='footer'>Footer content</div>
+
+</div>
+

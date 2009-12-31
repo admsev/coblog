@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  dob: 2009-12-29
+  username: MyString
+  sex: false
+
+two:
+  dob: 2009-12-29
+  username: MyString
+  sex: false

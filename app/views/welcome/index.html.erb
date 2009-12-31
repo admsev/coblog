@@ -1,0 +1,6 @@
+<% @posts = Post.paginate :page=>params[:page] %>
+
+<%= will_paginate @posts %>
+<%= render @posts %>
+<%= will_paginate @posts %>
+

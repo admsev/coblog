@@ -1,0 +1,7 @@
+<%- semantic_form_for form, :url => post_comments_path(form.post) do |f| -%>
+    <% f.inputs :name=>'Leave a comment' do -%>
+      <%= f.input :body %>
+    <% end %>
+    <%= f.buttons %>
+<%- end -%>
+

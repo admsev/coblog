@@ -1,0 +1,21 @@
+<% div_for @post do %>
+  <div class='title'><%=link_to h(@post.title), @post %></div>
+  <div class='content'>
+    <p><%= @post.preface %></p>
+    <p><%= @post.body %></p>
+  </div>
+  <div class='info'>
+    <div class='published'><%= @post.created_at %></div>
+    <div class='user'><%= link_to h(@post.user.username), @post.user %></div>
+    <div class='comments'><%= link_to @post.comments_count, post_path(@post, :anchor=>'comments'), :title=>'Read Comments' %></div>
+  </div>
+<% end %>
+
+
+<h2>Comments (<%= @post.comments_count %>)</h2>
+<%= render @post.comments %>
+
+<%- if user_signed_in? -%>
+  <%= render :partial=>'comments/form', :object => @post.comments.new %>
+<%- end -%>
+

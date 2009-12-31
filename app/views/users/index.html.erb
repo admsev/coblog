@@ -1,0 +1,19 @@
+<h1>Listing users</h1>
+<%= will_paginate @users %>
+
+<table class='users'>
+  <tr class='header'>
+    <th>Username</th>
+    <th>Posts</th>
+    <th>Comments</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr class='user'>
+    <td class='username'><%= link_to h(user.username), user %></td>
+    <td class='posts_count'><%= user.posts_count %></td>
+    <td class='comments_count'><%= user.comments_count %></td>
+  </tr>
+<% end %>
+</table>
+

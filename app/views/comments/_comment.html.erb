@@ -1,0 +1,11 @@
+<% div_for comment do %>
+  <div class='info'>
+    <ul>
+      <li class='avatar'><%= link_to(image_tag(comment.user.avatar.url(:tiny)), comment.user) if comment.user.avatar_file_name %></li>
+      <li class='username'><%= link_to h(comment.user.username), comment.user %></li>
+      <li class='date'><%= comment.created_at %></li>
+    </ul>
+  </div>
+  <div class='body'><%= comment.body -%></div>
+<% end %>
+

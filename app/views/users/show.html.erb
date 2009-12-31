@@ -1,0 +1,18 @@
+<h1><%=h @user.username %></h1>
+
+<dl class='user'>
+  <dt>Name</dt>
+  <dd><%= h @user.firstname %></dd>
+  <dt>Date of birth</dt>
+  <dd><%= @user.dob %></dd>
+  <dt>Foto</dt>
+  <dd><%= image_tag @user.avatar.url(:medium) if @user.avatar_file_name %></dd>
+  <dt>Registered at</dt>
+  <dd><%= @user.created_at %></dd>
+</dl>
+<% unless @user.posts.empty? %>
+
+<h2><%=h "#{@user.username}'s posts".capitalize %></h2>
+<%= render @user.posts %>
+<% end %>
+
