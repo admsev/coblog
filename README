@@ -6,7 +6,7 @@ Uses devise, formtastic, paperclip, friendly_id
 
 Installation:
 
-git clone git@github.com:admsev/coblog.git
+git clone git://github.com/admsev/coblog.git
 cd coblog
 rake gems:install
 script/server -e development
